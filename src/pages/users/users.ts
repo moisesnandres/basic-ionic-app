@@ -29,7 +29,6 @@ export class UsersPage {
 
     githubUsers
       .searchUsers('scotch').subscribe(users => {
-        console.log(users)
       });
   }
 
@@ -49,10 +48,6 @@ export class UsersPage {
         this.users = users
       });
     }
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
   }
 
 }
