@@ -20,7 +20,7 @@ export class UsersPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private githubUsers: GithubUsers) {
     githubUsers.load().subscribe(users => {
-      console.log(users)
+      this.users = users;
     })
   }
 
