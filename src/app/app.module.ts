@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganizationsPage } from '../pages/organizations/organizations';
+import { GithubUsers } from '../providers/github-users';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,6 @@ import { OrganizationsPage } from '../pages/organizations/organizations';
     ReposPage,
     OrganizationsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, GithubUsers]
 })
 export class AppModule {}
