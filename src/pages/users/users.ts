@@ -5,6 +5,8 @@ import { User } from '../../models/user';
 
 import {  GithubUsers } from '../../providers/github-users';
 
+import { UserDetailsPage } from '../user-details/user-details';
+
 /*
   Generated class for the Users page.
 
@@ -22,6 +24,10 @@ export class UsersPage {
     githubUsers.load().subscribe(users => {
       this.users = users;
     })
+  }
+
+  goToDetails(login: string) {
+    this.navCtrl.push(UserDetailsPage, {login});
   }
 
   ionViewDidLoad() {

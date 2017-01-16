@@ -5,13 +5,15 @@ import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganizationsPage } from '../pages/organizations/organizations';
 import { GithubUsers } from '../providers/github-users';
+import {UserDetailsPage } from '../pages/user-details/user-details';
 
 @NgModule({
   declarations: [
     MyApp,
     UsersPage,
     ReposPage,
-    OrganizationsPage
+    OrganizationsPage,
+    UserDetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -21,7 +23,8 @@ import { GithubUsers } from '../providers/github-users';
     MyApp,
     UsersPage,
     ReposPage,
-    OrganizationsPage
+    OrganizationsPage,
+    UserDetailsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, GithubUsers]
 })
